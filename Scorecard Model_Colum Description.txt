@@ -1,0 +1,31 @@
+Target Variabel:
+- `TARGET` : Target variable (1 - client with payment difficulties: he/she had late payment more than X days on at least one of the first Y installments of the loan in our sample, 0 - all other cases)
+
+Feature:
+- SK_ID_CURR : ID of loan in our sample
+- NAME_CONTRACT_TYPE : Identification if loan is cash or revolving
+- CODE_GENDER : Gender of the client
+- FLAG_OWN_CAR : Flag if the client owns a car
+- FLAG_OWN_REALTY : Flag if client owns a house or flat
+- CNT_CHILDREN : Number of children the client has
+- AMT_INCOME_TOTAL : Income of the client
+- AMT_CREDIT : Credit amount of the loan
+- DAYS_BIRTH : Client's age in days at the time of application
+- CNT_FAM_MEMBERS : How many family members does client have
+- REGION_RATING_CLIENT : Rating of the region where client lives (by our company rating)
+- WEEKDAY_APPR_PROCESS_START : On which day of the week did the client apply for the loan
+- REG_REGION_NOT_LIVE_REGION : Flag if client's permanent address does not match contact address (1=different, 0=same, at region level)
+
+
+Column Encoding:
+- `FLAG_OWN_CAR` & `FLAG_OWN_REALTY` :
+	0: 'N' 
+	1: 'Y'
+- WEEKDAY_APPR_PROCESS_START :
+	1: 'SUNDAY'
+	2: 'MONDAY'
+	3: 'TUESDAY'
+	4: 'WEDNESDAY'
+	5: 'THURSDAY'
+	6: 'FRIDAY'
+	7: 'SATURDAY' 
